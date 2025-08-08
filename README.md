@@ -124,7 +124,3 @@ Invoke-RestMethod -Uri "http://localhost:5000/products/" `
 - Server runs in debug mode for development.
 
 ---
-
-```
-
-Let me know if you want any additional sections or formatting!
