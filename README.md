@@ -1,15 +1,23 @@
-📄 README.md — E-commerce Product API (Flask)
-📌 Tech Stack
-Language: Python 3.x
+# 📄 E-commerce Product API (Flask)
 
-Framework: Flask
+A simple e-commerce product API built with Flask, using a JSON file for storage.
 
-Storage: JSON file (data/products.json)
+---
 
-🚀 Installation & Run
-Clone or download the project with the following structure:
+## 📌 Tech Stack
 
+- **Language:** Python 3.x
+- **Framework:** Flask
+- **Storage:** JSON file (`data/products.json`)
 
+---
+
+## 🚀 Installation & Running
+
+### 1. Clone or Download the Project
+
+Project structure:
+```
 ecommerce_api/
 │
 ├── app.py
@@ -19,58 +27,83 @@ ecommerce_api/
 │   └── products.json
 ├── requirements.txt
 └── README.md
-Install dependencies
+```
+
+### 2. Install Dependencies
+
 
 pip install -r requirements.txt
-Start the server
 
-bash
-Copiar
-Editar
+
+### 3. Start the Server
+
+
 python app.py
-Access the API
-By default, it will be available at:
 
-http://localhost:5000
-📂 API Endpoints
-1️⃣ GET /products/
+
+By default, the API will be available at:  
+`http://localhost:5000`
+
+---
+
+## 📂 API Endpoints
+
+### 1️⃣ Get All Products
+
+**GET** `/products/`  
 Returns all products.
 
-PowerShell Example
+**Example (PowerShell):**
 
 Invoke-RestMethod -Uri "http://localhost:5000/products/" -Method Get
-2️⃣ GET /products/?category=Apparel
+
+
+---
+
+### 2️⃣ Filter Products by Category
+
+**GET** `/products/?category=Apparel`  
 Filters products by category (case-insensitive).
 
-PowerShell Example
+**Example (PowerShell):**
 
 Invoke-RestMethod -Uri "http://localhost:5000/products/?category=Apparel" -Method Get
-3️⃣ GET /products/<id>
+
+
+---
+
+### 3️⃣ Get Product by ID
+
+**GET** `/products/<id>`  
 Returns a single product by ID.
 
-PowerShell Example
+**Example (PowerShell):**
 
 Invoke-RestMethod -Uri "http://localhost:5000/products/1" -Method Get
-4️⃣ POST /products/
+
+
+---
+
+### 4️⃣ Create a New Product
+
+**POST** `/products/`  
 Creates a new product (requires valid JSON body).
 
-Required fields:
+**Required Fields:**
+- `name` (string, non-empty)
+- `price` (number > 0)
+- `category` (string)
+- `description` (string, optional)
 
-name (string, non-empty)
-
-price (number > 0)
-
-category (string)
-
-description (string, optional)
-
-PowerShell Example
+**Example (PowerShell):**
 
 Invoke-RestMethod -Uri "http://localhost:5000/products/" `
   -Method Post `
   -Headers @{ "Content-Type" = "application/json" } `
   -Body '{"name":"New Hat","price":12.5,"category":"Apparel","description":"Nice hat"}'
-Expected Response (201 Created):
+
+
+**Expected Response (`201 Created`):**
 
 {
   "id": 4,
@@ -79,11 +112,19 @@ Expected Response (201 Created):
   "category": "Apparel",
   "description": "Nice hat"
 }
-🛠 Notes
-Data is stored in data/products.json.
 
-Each POST request appends the new product to the JSON file.
 
-In production, replace JSON file storage with a real database.
+---
 
-Server runs in debug mode for development purposes.
+## 🛠 Notes
+
+- Data is stored in `data/products.json`.
+- Each POST request appends a new product to the JSON file.
+- For production, replace JSON file storage with a real database.
+- Server runs in debug mode for development.
+
+---
+
+```
+
+Let me know if you want any additional sections or formatting!
