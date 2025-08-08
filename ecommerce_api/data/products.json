@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Plain T-Shirt",
+    "category": "Apparel",
+    "price": 14.99,
+    "description": "A plain t-shirt, 100% cotton."
+  },
+  {
+    "id": 2,
+    "name": "Running Sneakers",
+    "category": "Footwear",
+    "price": 79.99,
+    "description": "Lightweight running shoes."
+  },
+  {
+    "id": 3,
+    "name": "Baseball Cap",
+    "category": "Apparel",
+    "price": 9.99,
+    "description": "Adjustable baseball cap."
+  },
+  {
+    "id": 4,
+    "name": "New Hat",
+    "price": 12.5,
+    "category": "Apparel",
+    "description": "Nice hat"
+  }
+]
