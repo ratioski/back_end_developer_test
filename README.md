@@ -9,6 +9,7 @@ Storage: JSON file (data/products.json)
 🚀 Installation & Run
 Clone or download the project with the following structure:
 
+
 ecommerce_api/
 │
 ├── app.py
